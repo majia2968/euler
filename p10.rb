@@ -1,9 +1,21 @@
-arr = (2..2000000).to_a
-index = 0 
-while arr[index]**2 <= arr.last
-  arr = arr[index]
-  arr = arr.select {|x| x == arr || x%arr != 0}
-  index +=1
+def sieve_eratosthenes(n)
+	arr = (0..n).map {|e| true}
+	arr[0], arr[1] = false, false
+	for i in (2..n)
+		if i <= n
+			j = i*i
+			while j <= n
+				arr[j] = false
+				j += i
+			end
+		end
+		i += 1
+	end
+	return (0..n).find_all{|e| arr[e] == true}.inject(:+)
 end
 
-p arr
+
+p sieve_eratosthenes(2000000)
+
+
+
