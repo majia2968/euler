@@ -10,5 +10,4 @@ def multiples(base1, base2, max)
 
 end
 
-#p multiples(3, 10) + multiples(5, 10)
 p multiples(3, 5, 10)
