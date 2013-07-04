@@ -1,5 +1,4 @@
-arr = Array.new
-1.upto(100){|i| arr.push << i}
+arr = (1..100).to_a
 i = 1
 sum = 0
 tmp = []
