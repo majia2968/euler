@@ -1,7 +1,3 @@
-def palindromic
-
-end
-
 def is_palindromic(n)
   digits = n.to_s.size
   arr = Array.new
